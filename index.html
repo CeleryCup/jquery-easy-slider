@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photomatic</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>
+		.img-responsive{
+			margin: 30px auto;
+		}
+		#thumbnailsPane img{
+			width: 150px;
+			height: 83px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h2>A pic slider jquery plugin</h2>
+			<div id="photoPane">
+	          <img id="photoDisplay" class="img-responsive" src=""/>
+	        </div>
+			<div id="thumbnailsPane">
+	          <img src="thumbnails/3body.jpg"/>
+	          <img src="thumbnails/lake.jpg"/>
+	          <img src="thumbnails/jump2.jpg"/>
+	          <img src="thumbnails/jump.jpg"/>
+	          <img src="thumbnails/headshot.jpg"/>
+	          <img src="thumbnails/portrait.jpg"/>
+	          
+	        </div>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easy-slider.js"></script>
+<script type="text/javascript">
+      $(document).ready(function(){
+        $('#thumbnailsPane img').photomatic({
+          photoElement: '#photoDisplay',
+          previousControl: '#previousButton',
+          nextControl: '#nextButton'
+        });
+      });
+    </script>
+</body>
+</html>
